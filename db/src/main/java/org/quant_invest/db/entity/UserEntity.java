@@ -1,4 +1,4 @@
-package org.quant_invest.db.Entity;
+package org.quant_invest.db.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

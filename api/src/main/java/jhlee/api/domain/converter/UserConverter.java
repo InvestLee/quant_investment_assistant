@@ -6,7 +6,7 @@ import jhlee.api.common.exception.ApiException;
 import jhlee.api.domain.model.UserRegisterRequest;
 import jhlee.api.domain.model.UserResponse;
 import lombok.RequiredArgsConstructor;
-import org.quant_invest.db.Entity.UserEntity;
+import org.quant_invest.db.entity.UserEntity;
 
 import java.util.Optional;
 

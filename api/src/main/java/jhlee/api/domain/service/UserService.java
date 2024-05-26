@@ -1,6 +1,6 @@
 package jhlee.api.domain.service;
 
-import org.quant_invest.db.Entity.UserEntity;
+import org.quant_invest.db.entity.UserEntity;
 
 public interface UserService {
 

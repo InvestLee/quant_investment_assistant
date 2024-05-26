@@ -7,7 +7,7 @@ import jhlee.api.domain.converter.TokenConverter;
 import jhlee.api.domain.model.TokenResponse;
 import jhlee.api.domain.service.TokenService;
 import lombok.RequiredArgsConstructor;
-import org.quant_invest.db.Entity.UserEntity;
+import org.quant_invest.db.entity.UserEntity;
 
 import java.util.Optional;
 

@@ -5,8 +5,8 @@ import jhlee.api.common.error.UserErrorCode;
 import jhlee.api.common.exception.ApiException;
 import jhlee.api.domain.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.quant_invest.db.Entity.UserEntity;
-import org.quant_invest.db.Repository.UserRepository;
+import org.quant_invest.db.entity.UserEntity;
+import org.quant_invest.db.repository.UserRepository;
 import org.quant_invest.db.enums.UserStatus;
 import org.springframework.stereotype.Service;
 

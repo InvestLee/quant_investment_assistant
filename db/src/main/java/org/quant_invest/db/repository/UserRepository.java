@@ -1,6 +1,6 @@
-package org.quant_invest.db.Repository;
+package org.quant_invest.db.repository;
 
-import org.quant_invest.db.Entity.UserEntity;
+import org.quant_invest.db.entity.UserEntity;
 import org.quant_invest.db.enums.UserStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 
