@@ -1,59 +1,40 @@
 <template>
-  <div class="container">
-    <h2>To-Do List</h2>
-    <form  
-      @submit.prevent="onSubmit"
-      class="d-flex"
-    >
-      <div class="flex-grow-1 mr-2">
-        <input
-          class="form-control"
-          type="text" 
-          v-model="todo"
-          placeholder="Type new to-do"
-        >
-      </div>
-      <div>
-        <button 
-          class="btn btn-primary"
-          type="submit"
-        >
-          Add
-        </button>
-      </div>
-    </form>
-    {{ todos }}
+  <div :class="{ 'nav-open': $sidebar.showSidebar }">
+    <notifications></notifications>
+    <router-view></router-view>
   </div>
-  
-  
 </template>
 
 <script>
-import { ref } from 'vue';
-
-export default {
-  setup() {
-    const todo = ref('');
-    const todos = ref([]);
-
-    const onSubmit = () => {
-      todos.value.push({
-        id: Date.now(),
-        subject: todo.value
-      });
-    };
-
-    return {
-      todo,
-      todos,
-      onSubmit,
-    };
-  }
-}
+export default {};
 </script>
 
-<style>
-  .name {
-    color: red;
+<style lang="scss">
+.vue-notifyjs.notifications {
+  .alert {
+    z-index: 10000;
   }
+  .list-move {
+    transition: transform 0.3s, opacity 0.4s;
+  }
+  .list-item {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  .list-enter-active {
+    transition: transform 0.2s ease-in, opacity 0.4s ease-in;
+  }
+  .list-leave-active {
+    transition: transform 1s ease-out, opacity 0.4s ease-out;
+  }
+
+  .list-enter {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  .list-leave-to {
+    opacity: 0;
+    transform: scale(1.2, 0.7);
+  }
+}
 </style>
