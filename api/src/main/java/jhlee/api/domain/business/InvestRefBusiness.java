@@ -7,6 +7,9 @@ import jhlee.api.domain.model.*;
 import jhlee.api.domain.service.InvestRefService;
 import lombok.RequiredArgsConstructor;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @RequiredArgsConstructor
 @Business
 public class InvestRefBusiness {
@@ -25,5 +28,12 @@ public class InvestRefBusiness {
         var fearGreedEntity = investRefService.getRecentFearGreed();
         var response = fearGreedConverter.toResponse(fearGreedEntity);
         return response;
+    }
+
+    public List<YieldResponse> getAllYield() {
+        var yieldEntity = investRefService.getAllYield();
+        return yieldEntity.stream()
+                .map(yieldConverter::toResponse)
+                .collect(Collectors.toList());
     }
 }

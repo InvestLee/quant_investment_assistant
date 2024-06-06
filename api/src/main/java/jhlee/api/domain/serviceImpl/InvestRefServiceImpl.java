@@ -10,6 +10,8 @@ import org.quant_invest.db.repository.FearGreedRepository;
 import org.quant_invest.db.repository.YieldRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @Service
 public class InvestRefServiceImpl implements InvestRefService {
@@ -27,5 +29,10 @@ public class InvestRefServiceImpl implements InvestRefService {
     public YieldEntity getRecentYield() {
         return yieldRepository.findFirstByT10yieIsNotNullOrderByDateDesc()
                 .orElseThrow(()-> new ApiException(CommonErrorCode.NULL_POINT, "yield Null"));
+    }
+
+    @Override
+    public List<YieldEntity> getAllYield(){
+        return yieldRepository.findAllByT10yieIsNotNullOrderByDateAsc();
     }
 }
