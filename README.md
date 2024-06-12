@@ -18,6 +18,7 @@
 - BeautifulSoup
 - yahooquery
 - Vue.js
+- axios
 
 [투자참고지표]
 ![image](https://github.com/InvestLee/quant_investment_assistant/assets/101415950/436ff970-b224-4a61-af1a-72a4952c3692)
